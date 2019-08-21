@@ -24,7 +24,7 @@ A simple swifty extension wrapper for NSAttributedString or NSMutableAttributedS
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'AttributedString.swift/Classes/**/*'
-  
+  s.swift_version = '5.0'
   # s.resource_bundles = {
   #   'AttributedString.swift' => ['AttributedString.swift/Assets/*.png']
   # }
