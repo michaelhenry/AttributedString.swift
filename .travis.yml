@@ -2,9 +2,22 @@ osx_image: xcode10.2
 language: objective-c
 cache: cocoapods
 podfile: Example/Podfile
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/AttributedString.swift.xcworkspace -scheme AttributedString.swift-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint --allow-warnings
+
+jobs:
+  include:
+    - stage: Testing
+      before_install:
+      - gem install cocoapods
+      - pod install --project-directory=Example
+      script:
+      - xcodebuild test -enableCodeCoverage YES -workspace Example/AttributedString.swift.xcworkspace -scheme AttributedString.swift-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone Xʀ' -quiet
+      - pod lib lint --allow-warnings
+    - stage: deploying to cocoapods
+      before_install:
+        - echo $TRAVIS_TAG
+        - export LIB_VERSION=$TRAVIS_TAG
+        - gem install cocoapods
+      script:
+        - pod lib lint --allow-warnings
+        - pod trunk push --allow-warnings
+      if: tag IS present

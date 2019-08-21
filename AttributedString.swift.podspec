@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AttributedString.swift'
-  s.version          = '0.1.0'
+  s.version          = ENV["LIB_VERSION"] || '1.0.0'
   s.summary          = 'A simple swifty extension wrapper for NSAttributedString or NSMutableAttributedString'
 
   s.description      = <<-DESC
