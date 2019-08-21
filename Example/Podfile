@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AttributedString.swift_Example' do
+  pod 'AttributedString.swift', :path => '../'
+
+  target 'AttributedString.swift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
