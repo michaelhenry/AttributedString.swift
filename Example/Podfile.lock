@@ -1,0 +1,16 @@
+PODS:
+  - AttributedString.swift (0.1.0)
+
+DEPENDENCIES:
+  - AttributedString.swift (from `../`)
+
+EXTERNAL SOURCES:
+  AttributedString.swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AttributedString.swift: ee0ae1986b2a499d83e03ee3e68823e7aae41c25
+
+PODFILE CHECKSUM: c2a5950ccbb03f7b3d0b3528a2d5c927362bdac9
+
+COCOAPODS: 1.7.4

@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		45B63980C379770DFBE93B81 /* Pods_AttributedString_swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttributedString_swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D9E23494B66B14B46A80CDB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		57DF592249050DB6BAEA41C0 /* AttributedString.swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AttributedString.swift.podspec; path = ../AttributedString.swift.podspec; sourceTree = "<group>"; };
+		4D9E23494B66B14B46A80CDB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		57DF592249050DB6BAEA41C0 /* AttributedString.swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AttributedString.swift.podspec; path = ../AttributedString.swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* AttributedString.swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttributedString.swift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		B89BA07CB5E89FA728B4C9A7 /* Pods-AttributedString.swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttributedString.swift_Example.debug.xcconfig"; path = "Target Support Files/Pods-AttributedString.swift_Example/Pods-AttributedString.swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D87D10440057ACB8A45E5F0B /* Pods-AttributedString.swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttributedString.swift_Example.release.xcconfig"; path = "Target Support Files/Pods-AttributedString.swift_Example/Pods-AttributedString.swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E69C71899E4F18AD3FD10C83 /* Pods-AttributedString.swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttributedString.swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-AttributedString.swift_Tests/Pods-AttributedString.swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EACB5DCA4424ADA0A9E57C0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EACB5DCA4424ADA0A9E57C0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				8FF4993354A4C95B3EE5754C /* Pods-AttributedString.swift_Tests.debug.xcconfig */,
 				E69C71899E4F18AD3FD10C83 /* Pods-AttributedString.swift_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

@@ -1,5 +1,5 @@
 import XCTest
-import AttributedString.swift
+import AttributedString_swift
 
 class Tests: XCTestCase {
     

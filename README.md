@@ -1,5 +1,8 @@
 # AttributedString.swift
 
+A simple swifty extension wrapper for `NSAttributedString` or `NSMutableAttributedString` to make them much easier to use.
+
+
 [![CI Status](https://img.shields.io/travis/michaelhenry/AttributedString.swift.svg?style=flat)](https://travis-ci.org/michaelhenry/AttributedString.swift)
 [![Version](https://img.shields.io/cocoapods/v/AttributedString.swift.svg?style=flat)](https://cocoapods.org/pods/AttributedString.swift)
 [![License](https://img.shields.io/cocoapods/l/AttributedString.swift.svg?style=flat)](https://cocoapods.org/pods/AttributedString.swift)
@@ -22,7 +25,7 @@ pod 'AttributedString.swift'
 
 ## Author
 
-michaelhenry, me@iamkel.net
+[@michaelhenry](https://github.com/michaelhenry), me@iamkel.net
 
 ## License
 
