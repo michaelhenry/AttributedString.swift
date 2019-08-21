@@ -1,7 +1,10 @@
 # AttributedString.swift
 
-A simple swifty extension wrapper for `NSAttributedString` or `NSMutableAttributedString` to make them much easier to use.
+Swifty NSAttributed String.
 
+
+# Problem
+The problem is `attributes` is a `[NSAttributedStringKey: Any]`,  even though the keys  `NSAttributedString.Key` are all defined,  the values still a type of `Any`, which means we have to deal with literally `Any`thing. 
 
 [![CI Status](https://img.shields.io/travis/michaelhenry/AttributedString.swift.svg?style=flat)](https://travis-ci.org/michaelhenry/AttributedString.swift)
 [![Version](https://img.shields.io/cocoapods/v/AttributedString.swift.svg?style=flat)](https://cocoapods.org/pods/AttributedString.swift)
