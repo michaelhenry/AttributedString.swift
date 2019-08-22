@@ -48,6 +48,7 @@ public extension NSAttributedString {
   enum Scope {
     case all
     case subtext(String)
+    case closedRange(ClosedRange<Int>)
   }
   
   convenience init(string:String, attrs:[Attribute] = []) {
@@ -64,11 +65,16 @@ public extension NSMutableAttributedString {
     case .subtext(let substr):
       let range = (string as NSString).range(of: substr)
       addAttributes(attrs.dictionaryValue, range:range)
+    case .closedRange(let value):
+      if let first = value.first, let last = value.last {
+        let nsRange = NSRange(location: first, length: last - first + 1)
+        addAttributes(attrs.dictionaryValue, range:nsRange)
+      }
     }
   }
 }
 
-extension Sequence where Element == NSAttributedString.Attribute {
+fileprivate extension Sequence where Element == NSAttributedString.Attribute {
   var dictionaryValue:[NSAttributedString.Key: Any] {
     return reduce([:]) { (result, attr) -> [NSAttributedString.Key: Any] in
       var result = result
