@@ -37,12 +37,18 @@ When adding more **attributes** on a **NSMutableAttributedString**, you can use 
 ## Example
 
 ```swift
-let attrs1:[NSAttributedString.Attribute] = [
-.font(UIFont.boldSystemFont(ofSize: 30)),
-.link("https://www.google.com")
-]
+import AttributedString_swift
 
-label1.attributedText = NSAttributedString(string: "Hello World", attrs:attrs1)
+let label1 = Label()
+let label2 = Label()
+...
+
+label1.attributedText = NSAttributedString(
+  string: "Hello World", 
+  attrs:[
+    .font(UIFont.boldSystemFont(ofSize: 30)),
+    .link("https://www.google.com")
+  ])
 
 let attrText2 = NSMutableAttributedString(
   string: "The quick brown fox jump over the lazy dog.",
