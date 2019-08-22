@@ -16,6 +16,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     let attrs1:[NSAttributedString.Attribute] = [
       .font(UIFont.boldSystemFont(ofSize: 30)),
       .link("https://www.google.com")
@@ -27,22 +28,33 @@ class ViewController: UIViewController {
     let attrText2 = NSMutableAttributedString(
       string: "The quick brown fox jump over the lazy dog.",
       attrs: [
-        .font(UIFont.systemFont(ofSize: 18)),
+        .font(.systemFont(ofSize: 18)),
         .foregroundColor(UIColor.orange)
       ])
     
-    // for The
+    // Adding more attributes!
     attrText2.addAttributes(
       attrs: [
-        .font(UIFont.boldSystemFont(ofSize: 50)),
+        .font(.boldSystemFont(ofSize: 50)),
         .foregroundColor(UIColor.gray)
       ],
       for: .subtext("The"))
     
-    // For dog
     attrText2.addAttributes(
       attrs: [
-        .font(UIFont.boldSystemFont(ofSize: 30)),
+        .foregroundColor(.green),
+        .font(.systemFont(ofSize: 50))],
+      for: .closedRange(4...8))
+    
+    attrText2.addAttributes(
+      attrs: [
+        .foregroundColor(.red),
+        .font(.boldSystemFont(ofSize: 50))],
+      for: .closedRange(10...15))
+    
+    attrText2.addAttributes(
+      attrs: [
+        .font(.boldSystemFont(ofSize: 30)),
         .link("https://en.wikipedia.org/wiki/Dog"),
       ],
       for: .subtext("dog"))
