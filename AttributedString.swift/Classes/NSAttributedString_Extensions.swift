@@ -8,7 +8,8 @@ public extension NSAttributedString {
     case foregroundColor(UIColor)
     case kern(NSNumber)
     case ligature(NSNumber)
-    case link(String) // string for flexibility, instead of URL
+    case link(String)
+    case linkUrl(URL)
     case paragraphStyle(NSParagraphStyle)
     case shadow(NSShadow)
     case underlineColor(UIColor)
@@ -32,6 +33,8 @@ public extension NSAttributedString {
     case .ligature(let value):
       return (.ligature, value)
     case .link(let value):
+      return (.link, value)
+    case .linkUrl(let value):
       return (.link, value)
     case .paragraphStyle(let value):
       return (.paragraphStyle, value)
