@@ -4,7 +4,7 @@ Swifty NSAttributed String.
 
 
 # Problem
-The problem is `attributes` is a `[NSAttributedStringKey: Any]`,  even though the keys  `NSAttributedString.Key` are all defined,  the values still a type of `Any`, which means we have to deal with literally `Any`thing. 
+The problem is `attributes` is a `[NSAttributedStringKey: Any]`,  even though the keys  `NSAttributedString.Key` are all defined,  the values still a type of `Any`, which means we have to deal with literally `Any`thing. And feel like it's not swift.
 
 [![CI Status](https://img.shields.io/travis/michaelhenry/AttributedString.swift.svg?style=flat)](https://travis-ci.org/michaelhenry/AttributedString.swift)
 [![Version](https://img.shields.io/cocoapods/v/AttributedString.swift.svg?style=flat)](https://cocoapods.org/pods/AttributedString.swift)
