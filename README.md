@@ -54,14 +54,14 @@ let attrText2 = NSMutableAttributedString(
   string: "The quick brown fox jump over the lazy dog.",
   attrs: [
     .font(.systemFont(ofSize: 18)),
-    .foregroundColor(UIColor.orange)
+    .foregroundColor(.orange)
   ])
 
 // Adding more attributes!
 attrText2.addAttributes(
   attrs: [
     .font(.boldSystemFont(ofSize: 50)),
-    .foregroundColor(UIColor.gray)
+    .foregroundColor(.gray)
   ],
   for: .subtext("The"))
 
