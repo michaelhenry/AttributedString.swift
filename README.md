@@ -11,11 +11,8 @@ The problem is `attributes` is a `[NSAttributedStringKey: Any]`,  even though th
 [![License](https://img.shields.io/cocoapods/l/AttributedString.swift.svg?style=flat)](https://cocoapods.org/pods/AttributedString.swift)
 [![Platform](https://img.shields.io/cocoapods/p/AttributedString.swift.svg?style=flat)](https://cocoapods.org/pods/AttributedString.swift)
 
-## Example
+![Screenshot](images/screenshot.png)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -26,9 +23,80 @@ it, simply add the following line to your Podfile:
 pod 'AttributedString.swift'
 ```
 
+## How to use
+After installation, Just  `import AttributedString_swift`
+
+```swift
+import AttributedString_swift
+```
+
+When adding more **attributes** on a **NSMutableAttributedString**, you can use the `func addAttributes(attrs:[Attribute], for scope:Scope)`.
+
+`Scope` has currently have 3 types: `.all`, `.subtext`, `closedRange`. 
+
+## Example
+
+```swift
+let attrs1:[NSAttributedString.Attribute] = [
+.font(UIFont.boldSystemFont(ofSize: 30)),
+.link("https://www.google.com")
+]
+
+label1.attributedText = NSAttributedString(string: "Hello World", attrs:attrs1)
+
+let attrText2 = NSMutableAttributedString(
+  string: "The quick brown fox jump over the lazy dog.",
+  attrs: [
+    .font(.systemFont(ofSize: 18)),
+    .foregroundColor(UIColor.orange)
+  ])
+
+// Adding more attributes!
+attrText2.addAttributes(
+  attrs: [
+    .font(.boldSystemFont(ofSize: 50)),
+    .foregroundColor(UIColor.gray)
+  ],
+  for: .subtext("The"))
+
+attrText2.addAttributes(
+  attrs: [
+    .foregroundColor(.green),
+    .font(.systemFont(ofSize: 50))
+  ],
+  for: .closedRange(4...8))
+
+attrText2.addAttributes(
+  attrs: [
+    .foregroundColor(.red),
+    .font(.boldSystemFont(ofSize: 50))],
+  for: .closedRange(10...15))
+
+attrText2.addAttributes(
+  attrs: [
+    .font(.boldSystemFont(ofSize: 30)),
+    .link("https://en.wikipedia.org/wiki/Dog"),
+  ],
+  for: .subtext("dog"))
+
+// With paragraph style for whole text
+let paragraphStyle = NSMutableParagraphStyle()
+paragraphStyle.alignment = .center
+attrText2.addAttributes(
+  attrs: [
+    .paragraphStyle(paragraphStyle)
+  ],
+  for: .all)
+
+label2.attributedText = attrText2
+```
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+
 ## Author
 
-[@michaelhenry](https://github.com/michaelhenry), me@iamkel.net
+[@michaelhenry](https://github.com/michaelhenry)
 
 ## License
 
