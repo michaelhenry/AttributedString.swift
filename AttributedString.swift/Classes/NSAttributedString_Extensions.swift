@@ -13,6 +13,7 @@ public extension NSAttributedString {
     case paragraphStyle(NSParagraphStyle)
     case shadow(NSShadow)
     case underlineColor(UIColor)
+    case underlineStyle(NSUnderlineStyle)
   }
 
   // Define the equivalent kv here.
@@ -42,6 +43,8 @@ public extension NSAttributedString {
       return (.shadow, value)
     case .underlineColor(let value):
       return (.underlineColor, value)
+    case .underlineStyle(let value):
+      return (.underlineStyle, value.rawValue)
     }
   }
   

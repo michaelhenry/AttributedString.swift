@@ -35,4 +35,13 @@ class Tests: XCTestCase {
     let attributes = attributedText.attributes(at: 0, effectiveRange:nil)
     XCTAssertEqual(attributes[.font] as! UIFont, font)
   }
+  
+  func testUnderlineStyle() {
+    let style = NSUnderlineStyle.styleSingle
+    let attributedText = NSAttributedString(
+      string: "Hello World",
+      attrs: [.underlineStyle(style)])
+    let attributes = attributedText.attributes(at: 0, effectiveRange:nil)
+    XCTAssertEqual(NSUnderlineStyle(rawValue: attributes[.underlineStyle] as! Int), style)
+  }
 }
